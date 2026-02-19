@@ -1,16 +1,16 @@
-self: final: prev: lib:
+self: final: prev:
 let
   eufs_sim_src = final.fetchFromGitLab {
     owner = "eufs";
     repo = "eufs_sim";
     rev = "master";
-    sha256 = lib.fakeSha256;
+    sha256 = final.lib.fakeSha256;
   };
   eufs_msgs_src = final.fetchFromGitLab {
     owner = "eufs";
     repo = "eufs_msgs";
     rev = "master";
-    sha256 = lib.fakeSha256;
+    sha256 = final.lib.fakeSha256;
   };
 in
 {
