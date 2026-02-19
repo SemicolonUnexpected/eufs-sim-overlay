@@ -1,4 +1,4 @@
-self: final: prev:
+self: final: prev: lib:
 let
   eufs_sim_src = final.fetchFromGitLab {
     owner = "eufs";
