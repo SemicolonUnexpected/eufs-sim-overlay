@@ -34,13 +34,21 @@
     in
     {
       packages.${system} = eufsPackages // {
-        default = eufsPackages.eufs-msgs; # eufs-sim;
+        default = eufsPackages.eufs-sim;
       };
 
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = [
           eufsPackages.eufs-msgs
-          # eufsPackages.eufs-sim
+          eufsPackages.eufs-sim
+          eufsPackages.eufs-launcher
+          eufsPackages.eufs-models
+          eufsPackages.eufs-plugins
+          eufsPackages.eufs-racecar
+          eufsPackages.eufs-rqt
+          eufsPackages.eufs-sensors
+          eufsPackages.eufs-tracks
+          ros.ros-base
         ];
       };
     };
